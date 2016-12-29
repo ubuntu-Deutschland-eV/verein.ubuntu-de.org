@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+
+    {# CUSTOM VARIABLES #}
+    {# do *not* includes '/' at end! #}
+    {% set STATIC_PATH = SITEURL + '/' + THEME_STATIC_DIR %}
+    {% set STATIC_CSS = STATIC_PATH + '/css' %}
+    {% set STATIC_JS = STATIC_PATH + '/js' %}
+    {% set STATIC_IMG = STATIC_PATH + '/img' %}
+
+<head>
+    {% block head %}
+        <title>
+            {# TODO check whether to change titles #}
+            {% block title %}{{ SITENAME }}{% endblock title %}
+        </title>
+        <meta charset="utf-8" />
+
+{#
+        {% assets filters="cssutils", output="css/style-%(version)s.min.css", "css/build.css", "css/customizations.css" %}
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        {% endassets %}
+#}
+        {% assets filters="pyscss", output="css/style-%(version)s.min.css", "scss/build.scss" %}
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        {% endassets %}
+
+
+
+        <link rel="shortcut icon" href="{{ STATIC_IMG }}/favicon.ico" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        {# handle custom 'robot: <option>' metatag
+            see https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?hl=de#gltige-indexierungs--und-bereitstellungsanweisungen for option
+        #}
+        {% macro robot(option) %}
+            <meta name="robots" content="{{ option }}" />
+        {% endmacro %}
+        {% if article and article.robot %}
+            {{ robot(article.robot) }}
+        {% elif page and page.robot %}
+            {{ robot(page.robot) }}
+        {% endif %}
+
+
+        {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} – Artikel in allen Sprachen – Atom Feed" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} – Artikel in allen Sprachen – RSS Feed" />
+        {% endif %}
+        {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} – alle Artikel – Atom Feed" />
+        {% endif %}
+        {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} – alle Artikel – RSS Feed" />
+        {% endif %}
+        {% if CATEGORY_FEED_ATOM and category %}
+        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} – Artikel der Kategorie {{category.name}} – Atom Feed" />
+        {% endif %}
+        {% if CATEGORY_FEED_RSS and category %}
+        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} – Artikel der Kategorie {{category.name}} – RSS Feed" />
+        {% endif %}
+        {% if TAG_FEED_ATOM and tag %}
+        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} – Artikel mit Tag „{{ tag.name }}“ – Atom Feed" />
+        {% endif %}
+        {% if TAG_FEED_RSS and tag %}
+        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} – Artikel mit Tag „{{ tag.name }}“ –  RSS Feed" />
+        {% endif %}
+
+    {% endblock %}
+</head>
+
+<body>
+
+    <header class="banner global" role="banner">
+        <nav role="navigation" class="nav-primary">
+            <span id="main-navigation-link">
+                <a accesskey="s" href="#main-content">
+                    Zum Inhalt springen
+                </a>
+            </span>
+            <div class="logo">
+                <a href="/">
+                    <img height="46px" src="{{ STATIC_IMG }}/ubuntu-deutschland03.png" alt="Ubuntu Deutschland e.V." />
+                </a>
+            </div>
+
+            <div id="nav">
+                <div class="nav-toggle">
+                    <a href="#nav" class="nav-toggle__link open"></a>
+                    <a href="#" class="nav-toggle__link close"></a>
+                </div>
+                <ul>
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for p in pages %}
+                            {% set classes = [] %}
+                            {% if p == page %}
+                                {% do classes.append('active') %}
+                            {% endif %}
+                            <li>
+                                <a href="{{ SITEURL }}/{{ p.url }}"
+                                   class="{{ ' '.join(classes)}}">
+                                   
+                                    {{ p.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="wrapper">
+        <div id="main-content" class="inner-wrapper">
+            <div class="row no-border">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="global clearfix">
+        <div class="legal clearfix">
+            <p class="twelve-col"> &copy; 2016 ubuntu Deutschland e.V.</p>
+            <ul class="inline-list clear">
+                <li>
+                    <a href="http://loco.ubuntu.com/teams/ubuntu-de-locoteam/">
+                        <small>Loco Germany</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://ubucon.de/">
+                        <small>Ubucon</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://forum.ubuntuusers.de/">
+                        <small>Support auf ubuntuusers.de</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <span class="accessibility-aid">
+            <a href="#">Zum Seitenbeginn springen</a>
+        </span>
+    </footer>
+
+</body>
+</html>

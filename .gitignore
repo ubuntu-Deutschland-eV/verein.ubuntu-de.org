@@ -1,0 +1,8 @@
+cache/
+output/
+virtualenv
+
+pip-selfcheck.json
+
+*.py[cod]
+*.pid
