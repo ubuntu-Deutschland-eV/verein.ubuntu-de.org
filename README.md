@@ -7,7 +7,7 @@ Build and activate an virtualenv
 
 Install all the dependencies via
 
-    $ pip install -r requirments.txt
+    $ pip install -r requirements.txt
 
 Build the HTML (to `output`) from the Markdown-files lying in `content`
 
@@ -45,7 +45,3 @@ to install ruby's gem system-wide, you have to install `ruby` and `scss-lint`
 location of the gem-binaries to the `PATH` manually, f.e.:
 
     PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH gulp build
-
-# TODO
-
- * equal width on desktop, even with small content

@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ page.title }}
+    {{ page.title }} – {{ super() }}
+{% endblock %}
+
+{% block meta %}
+    {{ super() }}
+
+    {% if page.summary %}
+        <meta name="description" content="{{ page.summary|striptags|e }}" />
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -10,8 +18,6 @@
     {{ page.content }}
 
     {% if page.modified %}
-        <p>
-        Last updated: {{ page.locale_modified }}
-        </p>
+        <p>Letztes Update: {{ page.locale_modified }}</p>
     {% endif %}
 {% endblock %}

@@ -1,4 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+    {% for article in articles_page.object_list %}
+        <article>
+            <header>
+                <h2> {{ article.title }} </h2>
+                <time datetime="{{ article.date }}">
+                    <small>{{ article.locale_date }}</small>
+                </time>
+            </header>
+            
+            {{ article.content }}
+        </article>
+    {% else %}
+        <p>Bisher ist hier nichts passiert&hellip; :(</p>
+    {% endfor %}
+
 {% endblock content %}

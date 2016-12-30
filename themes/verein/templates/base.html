@@ -11,25 +11,15 @@
 <head>
     {% block head %}
         <title>
-            {# TODO check whether to change titles #}
             {% block title %}{{ SITENAME }}{% endblock title %}
         </title>
-        <meta charset="utf-8" />
 
-{#
-        {% assets filters="cssutils", output="css/style-%(version)s.min.css", "css/build.css", "css/customizations.css" %}
-            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-        {% endassets %}
-#}
-        {% assets filters="pyscss", output="css/style-%(version)s.min.css", "scss/build.scss" %}
-            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-        {% endassets %}
-
-
+        {% block meta %}
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        {% endblock %}
 
         <link rel="shortcut icon" href="{{ STATIC_IMG }}/favicon.ico" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
         {# handle custom 'robot: <option>' metatag
             see https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?hl=de#gltige-indexierungs--und-bereitstellungsanweisungen for option
@@ -43,6 +33,9 @@
             {{ robot(page.robot) }}
         {% endif %}
 
+        {% assets filters="cssutils", output="css/style-%(version)s.min.css", "ubuntu-vanilla-theme/build/css/build.min.css" %}
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        {% endassets %}
 
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} – Artikel in allen Sprachen – Atom Feed" />
@@ -93,16 +86,22 @@
                     <a href="#" class="nav-toggle__link close"></a>
                 </div>
                 <ul>
+                    {% for title, link in MENUITEMS %}
+                        <li>
+                            <a href="{{ SITEURL }}/{{ link }}"
+                               {% if output_file == link + 'index.html' %} class="active"{% endif %}
+                               title="{{ title }}">
+                                {{ title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    
                     {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in pages %}
-                            {% set classes = [] %}
-                            {% if p == page %}
-                                {% do classes.append('active') %}
-                            {% endif %}
+                        {% for p in pages|sort(attribute='page_order') %}
                             <li>
                                 <a href="{{ SITEURL }}/{{ p.url }}"
-                                   class="{{ ' '.join(classes)}}">
-                                   
+                                   {% if p == page %}class="active"{% endif %}
+                                   title="{{ p.title }}">
                                     {{ p.title }}
                                 </a>
                             </li>
@@ -127,7 +126,7 @@
 
     <footer class="global clearfix">
         <div class="legal clearfix">
-            <p class="twelve-col"> &copy; 2016 ubuntu Deutschland e.V.</p>
+            <p class="twelve-col"> &copy; {{ CURRENTYEAR }} ubuntu Deutschland e.V.</p>
             <ul class="inline-list clear">
                 <li>
                     <a href="http://loco.ubuntu.com/teams/ubuntu-de-locoteam/">
