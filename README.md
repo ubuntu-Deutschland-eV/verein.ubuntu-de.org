@@ -1,15 +1,23 @@
 # How to install pelican
 
+Clone the git-Repository via
+
+    $ git clone --recursive git@github.com:ubuntu-Deutschland-eV/verein.ubuntu-de.org.git
+
+`--recursive` is needed for pelican-plugins and the theme which both use
+submodules. Otherwise you would initiate every submodule manually.
+
 Build and activate an virtualenv
 
     …/verein.ubuntu-de.org $ virtualenv3 virtualenv
-    source virtualenv/bin/activate
+    $ source virtualenv/bin/activate
 
 Install all the dependencies via
 
     $ pip install -r requirements.txt
 
-Build the HTML (to `output`) from the Markdown-files lying in `content`
+Build the HTML (to the folder `output`) from the Markdown-files lying
+in `content`
 
     $ make publish
 
@@ -33,6 +41,11 @@ restart the development server. To stop the development server run
 We use the „Ubuntu vanilla theme for Vanilla framework“ by Canonical Ltd.
 See https://github.com/ubuntudesign/ubuntu-vanilla-theme
 It's licensed under LGPLv3.
+
+**You only have to build the CSS if you made any changes.**
+Furthermore, commit the changes directly into
+https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme and
+update just the submodle-reference in this repository.
 
 To build the CSS run
 
