@@ -10,6 +10,17 @@ Wer Lust hat mitzumachen oder wissen will, wo der nächste Ubuntu Stand
 anzutreffen ist, kann auf die [Organisationsseiten des
 Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
+## 2017
+
+ * [Chemnitzer LinuxTage 11. und 12. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2017/clt/)
+
+## 2016
+
+ * [Chemnitzer LinuxTage 19. und 20. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2016/clt/)
+ * [Froscon 20. und 21. August](http://wiki.ubuntuusers.de/LocoTeam/Messen/2016/Froscon)
+ * [Ubucon 2016](http://wiki.ubucon.de/doku.php/ubucon:2016)
+ * [OpenRheinRuhr 5. und 6. November](https://wiki.ubuntuusers.de/LocoTeam/Messen/2016/ORR/)
+
 ## 2015
 
  * [Chemnitzer LinuxTage – 21. und 22. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2015/clt)
