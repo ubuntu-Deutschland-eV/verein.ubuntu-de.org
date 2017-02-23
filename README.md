@@ -1,48 +1,43 @@
-# How to install pelican
+# Local Development
 
 Clone the git-Repository via
 
-    $ git clone --recursive git@github.com:ubuntu-Deutschland-eV/verein.ubuntu-de.org.git
+    $ git clone git@github.com:ubuntu-Deutschland-eV/verein.ubuntu-de.org.git
 
-`--recursive` is needed for pelican-plugins and the theme which both use
-submodules. Otherwise you would initiate every submodule manually.
+To install all dependencies, run
 
-Build and activate an virtualenv
+    $ make install
 
-    …/verein.ubuntu-de.org $ virtualenv3 virtualenv
-    $ source virtualenv/bin/activate
+All articles, written in Markdown, lie in `content`. News can be placed directly in there,
+more articles are in the `pages` subfolder.
 
-Install all the dependencies via
-
-    $ pip install -r requirements.txt
-
-Build the HTML (to the folder `output`) from the Markdown-files lying
-in `content`
-
-    $ make publish
-
-Everything in `output` can be put to the webserver.
-
-If you just want to test locally, you can run (after activating the
-virtualenv)
+To test locally, you can run
 
     $ make devserver
 
-Thus, relative paths will be used. You can visit the site in your
-browser at `http://127.0.0.1:8000`. If you change something of the
-content or the theme, the site should be rebuild in the background
+You can visit the site in your browser at `http://127.0.0.1:8000`. If you change
+something of the content or the theme, the site should be rebuild in the background
 automatically. Otherwise you can run the above command a second time to
 restart the development server. To stop the development server run
 
     $ make stopserver
 
+# Deployment
+
+Build the HTML from the Markdown-files lying in `content`
+
+    $ make publish
+
+Everything in `output` can be put to the webserver.
+
 # Theme
+
+**You only have to build the CSS if you made any changes.**
 
 We use the „Ubuntu vanilla theme for Vanilla framework“ by Canonical Ltd.
 See https://github.com/ubuntudesign/ubuntu-vanilla-theme
 It's licensed under LGPLv3.
 
-**You only have to build the CSS if you made any changes.**
 Furthermore, commit the changes directly into
 https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme and
 update just the submodle-reference in this repository.

@@ -2,8 +2,8 @@
 ##
 # This section should match your Makefile
 ##
-PY=${PY:-python3}
-PELICAN=${PELICAN:-pelican}
+PY=${PY:-virtualenv/bin/python3}
+PELICAN=${PELICAN:-virtualenv/bin/pelican}
 PELICANOPTS=
 
 BASEDIR=$(pwd)
@@ -63,11 +63,11 @@ function start_up(){
   local port=$1
   echo "Starting up Pelican and HTTP server"
   shift
-  $PELICAN --debug --autoreload -r $INPUTDIR -o $OUTPUTDIR -s $CONFFILE $PELICANOPTS &
+  $BASEDIR/$PELICAN --debug --autoreload -r $INPUTDIR -o $OUTPUTDIR -s $CONFFILE $PELICANOPTS &
   pelican_pid=$!
   echo $pelican_pid > $PELICAN_PID
   mkdir -p $OUTPUTDIR && cd $OUTPUTDIR
-  $PY -m pelican.server $port &
+  $BASEDIR/$PY -m pelican.server $port &
   srv_pid=$!
   echo $srv_pid > $SRV_PID
   cd $BASEDIR

@@ -1,5 +1,5 @@
 PY?=python3
-PELICAN?=pelican
+PELICAN?=virtualenv/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -22,6 +22,7 @@ help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
+	@echo '   make install                        initial setup                      '
 	@echo '   make html                           (re)generate the web site          '
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make regenerate                     regenerate files upon modification '
@@ -56,5 +57,11 @@ stopserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
+install:
+	virtualenv3 virtualenv
+	virtualenv/bin/pip install -r requirements.txt
+	git submodule init
+	git submodule update
+	cd plugins/pelican-page-order/ && git submodule init . && git submodule update .
 
-.PHONY: html help clean regenerate devserver stopserver publish ssh_upload rsync_upload
+.PHONY: html help clean regenerate devserver stopserver publish install
