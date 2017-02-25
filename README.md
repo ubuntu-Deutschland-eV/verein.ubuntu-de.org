@@ -4,6 +4,10 @@ Clone the git-Repository via
 
     $ git clone git@github.com:ubuntu-Deutschland-eV/verein.ubuntu-de.org.git
 
+Furthermore install `python-virtualenv`, if you use Ubuntu via
+
+    $ sudo apt install python-virtualenv
+
 To install all dependencies, run
 
     $ make install
