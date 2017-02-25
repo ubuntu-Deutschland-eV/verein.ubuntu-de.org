@@ -58,7 +58,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 install:
-	virtualenv3 virtualenv
+	virtualenv --python=python3 virtualenv
 	virtualenv/bin/pip install -r requirements.txt
 	git submodule init
 	git submodule update
