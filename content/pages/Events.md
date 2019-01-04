@@ -10,9 +10,15 @@ Wer Lust hat mitzumachen oder wissen will, wo der nächste Ubuntu Stand
 anzutreffen ist, kann auf die [Organisationsseiten des
 Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
+## 2018
+
+ * [Chemnitzer LinuxTage 10. und 11. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2018/clt/)
+ * [OpenRheinRuhr 3. und 4. November](https://wiki.ubuntuusers.de/LocoTeam/Messen/2018/ORR/)
+
 ## 2017
 
  * [Chemnitzer LinuxTage 11. und 12. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2017/clt/)
+ * [OpenRheinRuhr 4. und 5. November](https://wiki.ubuntuusers.de/LocoTeam/Messen/2017/ORR/)
 
 ## 2016
 
