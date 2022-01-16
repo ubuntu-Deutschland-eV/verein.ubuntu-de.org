@@ -10,6 +10,9 @@ Wer Lust hat mitzumachen oder wissen will, wo der nächste Ubuntu Stand
 anzutreffen ist, kann auf die [Organisationsseiten des
 Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
+## 2022
+ * [Chemnitzer Linux Tage 12. und 13. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/clt/)
+
 ## 2018
 
  * [Chemnitzer LinuxTage 10. und 11. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2018/clt/)
