@@ -13,6 +13,7 @@ Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 ## 2022
 
  * [Chemnitzer Linux Tage 12. und 13. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/clt/)
+ 
 
 ## 2018
 
