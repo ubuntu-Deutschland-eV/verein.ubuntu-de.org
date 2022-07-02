@@ -24,7 +24,7 @@ Verantwortlich für den Inhalt im Sinne des § 5 Telemediengesetz (TMG):
     Tel. +49 176 70321390
 
 Der Vorstand ist unter folgender Mailadresse zu erreichen:
-<vorstand-de@ubuntu-de.org>
+<vorstand-de-ev@lists.ubuntu.com>
 
     Kontoverbindung:
     IBAN: DE95 8306 5408 0004 9087 67
