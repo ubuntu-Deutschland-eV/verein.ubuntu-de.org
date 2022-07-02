@@ -11,7 +11,7 @@ Ein online-Anmeldungsformular haben wir leider nicht. Man kann:
    vorbeikommen und den Antrag ausfüllen 
  * Den [Antrag (OpenDocument)]({filename}/files/Mitgliedsantrag_0.odt)
    herunterladen, öffnen, ausfüllen, mit GPG-signierter Mail [an den
-   Verein mailen](mailto:vorstand-de@ubuntu-de.org)
+   Verein mailen](mailto:vorstand-de-ev@lists.ubuntu.com)
 
 In allen Fällen braucht man einen GPG-Schlüssel. Wie man den anlegt,
 steht [im ubuntuusers Wiki](https://wiki.ubuntuusers.de/GnuPG).
