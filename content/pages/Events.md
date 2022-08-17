@@ -13,6 +13,8 @@ Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 ## 2022
 
  * [Chemnitzer Linux Tage 12. und 13. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/clt/)
+ * [FrOSCon am 20. und 21. August](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/froscon/)
+ * [Kieler Open Source & Linux Tage am 17. September](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/kielux/)
  
 
 ## 2018
