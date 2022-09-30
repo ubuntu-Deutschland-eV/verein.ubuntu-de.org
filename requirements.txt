@@ -4,7 +4,7 @@ docutils==0.14
 feedgenerator==1.9
 htmlmin==0.1.10
 Jinja2==2.11.3
-joblib==0.11
+joblib==1.2.0
 Markdown==2.6.11
 MarkupSafe==1.1.1
 pelican==3.7.1
