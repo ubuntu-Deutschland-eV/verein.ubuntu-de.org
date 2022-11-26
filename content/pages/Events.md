@@ -10,6 +10,12 @@ Wer Lust hat mitzumachen oder wissen will, wo der nächste Ubuntu Stand
 anzutreffen ist, kann auf die [Organisationsseiten des
 Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
+## 2023
+ 
+ * [Chemnitzer Linux Tage 11. und 12. März] (https://wiki.ubuntuusers.de/LocoTeam/Messen/2023/clt/)
+
+
+
 ## 2022
 
  * [Chemnitzer Linux Tage 12. und 13. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2022/clt/)
