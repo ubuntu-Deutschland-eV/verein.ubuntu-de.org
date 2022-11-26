@@ -12,7 +12,7 @@ Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
 ## 2023
  
- * [Chemnitzer Linux Tage 11. und 12. März] (https://wiki.ubuntuusers.de/LocoTeam/Messen/2023/clt/)
+ * [Chemnitzer Linux Tage 11. und 12. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2023/clt/)
 
 
 
