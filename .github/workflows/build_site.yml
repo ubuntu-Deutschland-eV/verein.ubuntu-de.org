@@ -21,10 +21,10 @@ jobs:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -38,23 +38,17 @@ jobs:
       run: make publish
 
     - name: Attach build html
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       if: matrix.python-version == env.PYTHON_TO_DEPLOY
       with:
         name: html_output
         path: output
 
-    - name: Build tar for github pages
+    - name: Upload GitHub Pages artifact
       if: github.ref_name == env.BRANCH_TO_DEPLOY && matrix.python-version == env.PYTHON_TO_DEPLOY
-      run: tar --dereference --hard-dereference --directory output/ -cvf artifact.tar .
-
-    - name: Upload tar for github pages
-      if: github.ref_name == env.BRANCH_TO_DEPLOY && matrix.python-version == env.PYTHON_TO_DEPLOY
-      uses: actions/upload-artifact@main
+      uses: actions/upload-pages-artifact@v1
       with:
-        name: github-pages
-        path: ./artifact.tar
-        if-no-files-found: error
+        path: output/
 
   deploy:
     if: github.ref_name == 'master'
