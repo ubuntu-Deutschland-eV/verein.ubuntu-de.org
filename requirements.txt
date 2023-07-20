@@ -9,7 +9,7 @@ Markdown==2.6.11
 MarkupSafe==1.1.1
 pelican==3.7.1
 pelican-minify==0.9
-Pygments==2.7.4
+Pygments==2.15.0
 python-dateutil==2.6.1
 pytz==2016.10
 six==1.10.0
