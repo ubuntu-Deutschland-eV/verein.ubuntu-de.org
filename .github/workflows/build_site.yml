@@ -1,8 +1,5 @@
 permissions:
   contents: read
-  pages: write
-  deployments: write
-  id-token: write
 
 name: Build HTML of site
 
@@ -21,10 +18,10 @@ jobs:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -37,8 +34,15 @@ jobs:
     - name: Build html of site
       run: make publish
 
+      # https://github.com/actions/upload-pages-artifact#example-permissions-fix-for-linux
+    - name: Fix permissions
+      run: |
+        chmod -c -R +rX "output/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+        done
+
     - name: Attach build html
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: matrix.python-version == env.PYTHON_TO_DEPLOY
       with:
         name: html_output
@@ -46,18 +50,22 @@ jobs:
 
     - name: Upload GitHub Pages artifact
       if: github.ref_name == env.BRANCH_TO_DEPLOY && matrix.python-version == env.PYTHON_TO_DEPLOY
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: output/
 
   deploy:
     if: github.ref_name == 'master'
-    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+      actions: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
