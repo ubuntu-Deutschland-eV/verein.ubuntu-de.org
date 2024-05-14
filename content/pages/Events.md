@@ -10,6 +10,10 @@ Wer Lust hat mitzumachen oder wissen will, wo der nächste Ubuntu Stand
 anzutreffen ist, kann auf die [Organisationsseiten des
 Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
+## 2024
+ * [Chemnitzer Linux Tage 16. und 17. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2024/clt/)
+ * [FrOSCon am 17. und 18. August](https://wiki.ubuntuusers.de/LocoTeam/Messen/2024/froscon/)
+
 ## 2023
  
  * [Chemnitzer Linux Tage 11. und 12. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2023/clt/)
