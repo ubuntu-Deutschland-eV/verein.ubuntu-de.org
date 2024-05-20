@@ -13,6 +13,7 @@ Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 ## 2024
  * [Chemnitzer Linux Tage 16. und 17. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2024/clt/)
  * [FrOSCon am 17. und 18. August](https://wiki.ubuntuusers.de/LocoTeam/Messen/2024/froscon/)
+ * [Kieler Linux Tage am 21. September](https://wiki.ubuntuusers.de/LocoTeam/Messen/2024/kielux/)
 
 ## 2023
  
