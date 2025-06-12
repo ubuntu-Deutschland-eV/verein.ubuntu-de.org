@@ -30,13 +30,10 @@ JINJA_ENVIRONMENT = {'trim_blocks': True,
 
 ## Plugins ##
 
-LOCALE = 'de_DE.utf-8' # for open_graph
-
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
             'pelican-page-order',
             'assets',
-#            'pelican-open_graph',
             'sitemap',
           ]
 
