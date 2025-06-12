@@ -41,10 +41,6 @@ ASSET_SOURCE_PATHS = [
     'vendor',
 ]
 
-SITEMAP = {
-    'format': 'xml',
-    }
-
 # only one Atome Feed with all news
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
