@@ -32,11 +32,11 @@ JINJA_ENVIRONMENT = {'trim_blocks': True,
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
-            'assets',
+            'webassets',
             'sitemap',
           ]
 
-ASSET_SOURCE_PATHS = [
+WEBASSETS_SOURCE_PATHS = [
     'vendor',
 ]
 
