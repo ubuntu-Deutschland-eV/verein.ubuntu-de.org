@@ -23,10 +23,7 @@ To test locally, you can run
 
 You can visit the site in your browser at `http://127.0.0.1:8000`. If you change
 something of the content or the theme, the site should be rebuild in the background
-automatically. Otherwise you can run the above command a second time to
-restart the development server. To stop the development server run
-
-    $ make stopserver
+automatically.
 
 # Deployment
 
@@ -44,13 +41,11 @@ found at <https://github.com/ubuntu-Deutschland-eV/verein.ubuntu-de.org/actions?
 
 **You only have to build the CSS if you made any changes.**
 
-We use the „Ubuntu vanilla theme for Vanilla framework“ by Canonical Ltd.
-See https://github.com/ubuntudesign/ubuntu-vanilla-theme
+As theme we use a slightly modified version of „Ubuntu vanilla theme for Vanilla framework“ by Canonical Ltd.
+The framework was located at <https://github.com/ubuntudesign/ubuntu-vanilla-theme>.
 It's licensed under LGPLv3.
 
-Furthermore, commit the changes directly into
-https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme and
-update just the submodle-reference in this repository.
+Customizations are made in <https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme>.
 
 To build the CSS run
 
@@ -63,3 +58,14 @@ to install ruby's gem system-wide, you have to install `ruby` and `scss-lint`
 location of the gem-binaries to the `PATH` manually, f.e.:
 
     PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH gulp build
+
+Afterwards, update the subtree in this repository:
+
+If the theme repo is not added as remote locally, add it via
+
+	$ git remote add -f ubuntu-vanilla-theme https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme.git
+
+Then add the changes to this repository:
+
+	$ git fetch ubuntu-vanilla-theme customizations
+	$ git subtree pull --prefix themes/verein/vendor/ubuntu-vanilla-theme ubuntu-vanilla-theme customizations --squash
