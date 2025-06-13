@@ -13,7 +13,7 @@ from pelicanconf import *
 SITEURL = 'https://verein.ubuntu-de.org'
 RELATIVE_URLS = False
 
-PLUGINS += [ 'minify',
+PLUGINS += [ #'minify', # disable due to https://github.com/pelican-plugins/minify/issues/6
              'gzip_cache']
 
 DELETE_OUTPUT_DIRECTORY = True
