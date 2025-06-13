@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+
 from datetime import date
 
 AUTHOR = 'ubuntu'
@@ -40,7 +39,7 @@ WEBASSETS_SOURCE_PATHS = [
     'vendor',
 ]
 
-# only one Atome Feed with all news
+# only one Atom Feed with all news
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
