@@ -1,0 +1,6 @@
+pelican[markdown]
+pelican-minify>=2.0.0
+pelican-sitemap
+pelican-webassets
+cssutils>=2.11.1
+six>=1.17.0
