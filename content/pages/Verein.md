@@ -11,10 +11,10 @@ Informationen über den ubuntu Deutschland e.V.
 
 ## Dokumente
 
- * [Satzung des Vereins]({filename}/files/Satzung.pdf)
- * Mitgliedsantrag: [ODT]({filename}/files/Mitgliedsantrag_0.odt), [PDF]({filename}/files/Mitgliedsantrag.pdf)
- * [Vereinbarung]({filename}/files/agreement.pdf) mit [Canonical](http://canonical.com/)
+ * [Satzung des Vereins]({static}/files/Satzung.pdf)
+ * Mitgliedsantrag: [ODT]({static}/files/Mitgliedsantrag_0.odt), [PDF]({static}/files/Mitgliedsantrag.pdf)
+ * [Vereinbarung]({static}/files/agreement.pdf) mit [Canonical](http://canonical.com/)
 
 ## Protokolle
 
- * [Gründungsprotokoll]({filename}/files/gruendungsprotokoll.pdf)
+ * [Gründungsprotokoll]({static}/files/gruendungsprotokoll.pdf)
