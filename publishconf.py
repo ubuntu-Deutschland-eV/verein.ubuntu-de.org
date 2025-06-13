@@ -14,6 +14,7 @@ SITEURL = 'https://verein.ubuntu-de.org'
 RELATIVE_URLS = False
 
 PLUGINS += [ #'minify', # disable due to https://github.com/pelican-plugins/minify/issues/6
-             'gzip_cache']
+             'gzip_cache',
+             ]
 
 DELETE_OUTPUT_DIRECTORY = True

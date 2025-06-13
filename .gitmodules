@@ -2,6 +2,3 @@
 	path = themes/verein/vendor/ubuntu-vanilla-theme
 	url = https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme.git
 	branch = customizations
-[submodule "plugins"]
-	path = plugins
-	url = https://github.com/getpelican/pelican-plugins/
