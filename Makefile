@@ -57,8 +57,5 @@ publish:
 install:
 	virtualenv --python=python3 virtualenv
 	virtualenv/bin/pip install -r requirements.txt
-	git submodule init
-	git submodule update
-	cd plugins/pelican-page-order/ && git submodule init . && git submodule update .
 
 .PHONY: help html clean regenerate devserver publish install

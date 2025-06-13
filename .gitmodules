@@ -1,4 +1,0 @@
-[submodule "themes/verein/vendor/ubuntu-vanilla-theme"]
-	path = themes/verein/vendor/ubuntu-vanilla-theme
-	url = https://github.com/ubuntu-Deutschland-eV/ubuntu-vanilla-theme.git
-	branch = customizations
