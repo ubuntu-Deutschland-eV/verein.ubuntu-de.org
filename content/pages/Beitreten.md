@@ -1,5 +1,5 @@
 Title: Beitreten
-page_order: B
+menu_order: B
 
 ## Wie werde ich Mitglied?
 
