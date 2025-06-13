@@ -1,5 +1,5 @@
 Title: Impressum
-page_order: 50
+page_order: D
 
 ## ubuntu Deutschland e. V.
 

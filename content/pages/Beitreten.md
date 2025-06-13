@@ -1,5 +1,5 @@
 Title: Beitreten
-page_order: 10
+page_order: B
 
 ## Wie werde ich Mitglied?
 

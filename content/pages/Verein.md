@@ -1,5 +1,5 @@
 Title: Verein
-page_order: 5
+page_order: A
 
 Informationen über den ubuntu Deutschland e.V.
 

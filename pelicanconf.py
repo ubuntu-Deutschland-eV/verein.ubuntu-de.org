@@ -32,7 +32,6 @@ JINJA_ENVIRONMENT = {'trim_blocks': True,
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
-            'pelican-page-order',
             'assets',
             'sitemap',
           ]

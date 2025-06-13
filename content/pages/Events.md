@@ -1,5 +1,5 @@
 Title: Events
-page_order: 15
+page_order: C
 
 Hier sind einige Veranstaltungen aufgeführt, an denen der ubuntu
 Deutschland e.V. mitgewirkt hat oder mitwirken wird. Zusätzlich findet

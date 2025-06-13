@@ -97,7 +97,7 @@
                     {% endfor %}
                     
                     {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in pages|sort(attribute='page_order') %}
+                        {% for p in pages|sort(attribute='page_order') %} {# will be sorted according to the attribue as strings alphabetically #}
                             <li>
                                 <a href="{{ SITEURL }}/{{ p.url }}"
                                    {% if p == page %}class="active"{% endif %}
