@@ -1,0 +1,13 @@
+////
+/// @author       Web Team at Canonical Ltd
+/// @link         http://ubuntudesign.github.io/cloud-vanilla-theme/docs/#ubuntu-base
+/// @since        0.0.3
+////
+
+/// Base classes
+/// @group Utils
+@mixin ubuntu-base {
+  body {
+    background-color: $light-grey;
+  }
+}
