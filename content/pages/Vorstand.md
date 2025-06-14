@@ -7,7 +7,7 @@ Der Vorstand des ubuntu Deutschland e.V. besteht zur Zeit aus:
  * Michael Wehram, 2. Vorsitzender
  * Thoralf Schilde, Kassenwart
 
-Sie können den Vorstand per Mail <vorstand-de@ubuntu-de.org> oder per
+Sie können den Vorstand per Mail (siehe [Impressum]({filename}/pages/Impressum.md)) oder per
 Brief an folgende Adresse kontaktieren:
 
 Geschäftsstelle:
