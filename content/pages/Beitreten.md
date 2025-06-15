@@ -1,17 +1,17 @@
 Title: Beitreten
-page_order: 10
+menu_order: B
 
 ## Wie werde ich Mitglied?
 
 Ein online-Anmeldungsformular haben wir leider nicht. Man kann:
 
- * Den [Antrag (PDF)]({filename}/files/Mitgliedsantrag.pdf)
+ * Den [Antrag (PDF)]({static}/files/Mitgliedsantrag.pdf)
    herunterladen, ausdrucken, 
  * Auf einer Messe o.ä., auf der der Verein vertreten ist,
    vorbeikommen und den Antrag ausfüllen 
- * Den [Antrag (OpenDocument)]({filename}/files/Mitgliedsantrag_0.odt)
-   herunterladen, öffnen, ausfüllen, mit GPG-signierter Mail [an den
-   Verein mailen](mailto:vorstand-de-ev@lists.ubuntu.com)
+ * Den [Antrag (OpenDocument)]({static}/files/Mitgliedsantrag_0.odt)
+   herunterladen, öffnen, ausfüllen, mit GPG-signierter Mail an den
+   Verein mailen. Die E-Mail-Adresse findet sich im [Impressum]({filename}/pages/Impressum.md).
 
 In allen Fällen braucht man einen GPG-Schlüssel. Wie man den anlegt,
 steht [im ubuntuusers Wiki](https://wiki.ubuntuusers.de/GnuPG).

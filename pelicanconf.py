@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+
 from datetime import date
 
 AUTHOR = 'ubuntu'
@@ -30,25 +29,17 @@ JINJA_ENVIRONMENT = {'trim_blocks': True,
 
 ## Plugins ##
 
-LOCALE = 'de_DE.utf-8' # for open_graph
-
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
-            'pelican-page-order',
-            'assets',
-#            'pelican-open_graph',
+            'webassets',
             'sitemap',
           ]
 
-ASSET_SOURCE_PATHS = [
+WEBASSETS_SOURCE_PATHS = [
     'vendor',
 ]
 
-SITEMAP = {
-    'format': 'xml',
-    }
-
-# only one Atome Feed with all news
+# only one Atom Feed with all news
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None

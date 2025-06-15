@@ -40,7 +40,7 @@ wurde (in Absprache mit Canonical) am 12.11.05 in Nürnberg der Verein
 Zur Zeit unterstützen wir das deutschsprachige Forum
 „ubuntuusers.de“ und freuen uns auf weitere Community-Anfragen.
 (Anfragen bezüglich Unterstützung können an den Vorstand gerichtet
-werden: via E-Mail an <vorstand-de@ubuntu-de.org>.)
+werden. E-Mail-Adresse im [Impressum]({filename}/pages/Impressum.md).)
 
 In der Satzung des ubuntu Deutschland e.V. heißt es:
 
