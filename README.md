@@ -1,4 +1,4 @@
-![](https://github.com/ubuntu-Deutschland-eV/verein.ubuntu-de.org/workflows/Build%20HTML%20of%20site/badge.svg?branch=master)
+[![Build HTML of site](https://github.com/ubuntu-Deutschland-eV/verein.ubuntu-de.org/actions/workflows/build_site.yml/badge.svg)](https://github.com/ubuntu-Deutschland-eV/verein.ubuntu-de.org/actions/workflows/build_site.yml)
 
 # Local Development
 
