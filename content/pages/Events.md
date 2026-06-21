@@ -12,6 +12,7 @@ Messeteams](https://wiki.ubuntuusers.de/LocoTeam/Messen) vorbeischauen.
 
 ## 2026
  * [Chemnitzer Linux Tage 28. und 29. März](https://wiki.ubuntuusers.de/LocoTeam/Messen/2026/clt/)
+ * [FrOSCon 15. und 16. August](https://wiki.ubuntuusers.de/LocoTeam/Messen/2026/froscon/)
 
 
 ## 2025
