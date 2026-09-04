@@ -18,10 +18,10 @@ jobs:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -42,7 +42,7 @@ jobs:
         done
 
     - name: Attach build html
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       if: matrix.python-version == env.PYTHON_TO_DEPLOY
       with:
         name: html_output
@@ -50,7 +50,7 @@ jobs:
 
     - name: Upload GitHub Pages artifact
       if: github.ref_name == env.BRANCH_TO_DEPLOY && matrix.python-version == env.PYTHON_TO_DEPLOY
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: output/
 
@@ -68,4 +68,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
